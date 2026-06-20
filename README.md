@@ -12,6 +12,8 @@ I'm a cybersecurity practitioner and technology consultant with hands-on experie
 
 **Career direction:** Security Engineer · SOC Analyst · Penetration Tester
 
+See my full [Professional Statement](./Professional%20Statement%20/Professional%20Statement.md).
+
 ---
 
 ## Projects
@@ -22,9 +24,14 @@ I'm a cybersecurity practitioner and technology consultant with hands-on experie
 - **`Security-risk-assessment-report.docx`** — Structured security risk assessment report documenting threats, vulnerabilities, likelihood/impact, and prioritized mitigations.
 
 ### Network Traffic Analysis & Incident Response
+- **[`Network_security_analysis.md`](./Network_security_analysis.md)** — Markdown writeup of a DNS/ICMP outage reconstructed from a packet capture: summary, packet-level data analysis, root cause, and remediation.
 - **`21capture.pcapng`** — Raw packet capture used for protocol and traffic analysis (open with Wireshark/tshark).
 - **`Cybersecurity incident report network traffic analysis.pdf`** / **`Cybersecurity-incident-report-network-traffic-analysis.docx`** — Incident analysis report reconstructing an event from captured network traffic, including timeline, indicators, root cause, and response actions.
 - **`Cybersecurity_Incident_Report.docx`** — DNS/ICMP incident report analyzing a failed DNS resolution: a workstation's UDP query to port 53 returned an ICMP "Destination Unreachable – Port Unreachable," halting name resolution. Documents the problem summary, packet-level data analysis, root cause, and remediation.
+
+### Linux & SQL Security Labs
+- **[`Linux_permissions_lab.md`](./Linux_permissions_lab.md)** — Auditing and correcting Linux file permissions in a multi-user research directory, applying least privilege with `chmod`.
+- **[`Secure_query_lab.md`](./Secure_query_lab.md)** — Investigating suspicious authentication activity with SQL filters across login and employee tables.
 
 ### Network Hardening
 - **`Network-hardening-tools.xlsx`** — Catalog of network-hardening techniques and tools mapped to the controls they enforce (segmentation, firewall rules, access control, monitoring).
@@ -39,13 +46,14 @@ I'm a cybersecurity practitioner and technology consultant with hands-on experie
 | Network Security | VLAN segmentation, firewall policy, IDS/IPS (Suricata), DNS security |
 | Traffic Analysis | Packet capture review, protocol analysis, IoC identification (Wireshark/tcpdump) |
 | Incident Response | Timeline reconstruction, root-cause analysis, documentation |
+| System Hardening | Linux file permissions, least privilege, SQL-based log investigation |
 | Documentation | Executive summaries, structured reports, professional client-ready deliverables |
 
 ---
 
 ## Tools & Technologies
 
-`Wireshark` · `tcpdump` · `Suricata` · `pfSense` · `UniFi` · `pfBlockerNG` · `Unbound DNS` · `NIST CSF` · `NIST SP 800-series` · `Python` · `Bash`
+`Wireshark` · `tcpdump` · `Suricata` · `pfSense` · `UniFi` · `pfBlockerNG` · `Unbound DNS` · `Linux` · `SQL` · `NIST CSF` · `NIST SP 800-series` · `Python` · `Bash`
 
 ---
 
