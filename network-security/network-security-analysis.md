@@ -3,7 +3,7 @@
 **Author:** Ivan Rozenblad
 **Type:** Network traffic analysis / incident writeup
 **Tools:** tcpdump, Wireshark
-**Companion capture:** `21capture.pcapng`
+**Companion capture:** `dns-outage-capture.pcapng`
 
 ---
 

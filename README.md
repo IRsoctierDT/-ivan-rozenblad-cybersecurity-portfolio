@@ -1,6 +1,6 @@
 # Ivan Rozenblad — Cybersecurity Portfolio
 
-A working portfolio of hands-on cybersecurity projects spanning risk assessment, security auditing, network traffic analysis, incident response, and privacy/compliance. The artifacts here demonstrate practical application of security frameworks (NIST CSF, NIST SP 800-series), threat analysis, and defensive engineering.
+A working portfolio of hands-on cybersecurity projects spanning risk assessment, security auditing, network traffic analysis, incident response, and security tooling. The artifacts here demonstrate practical application of security frameworks (NIST CSF, NIST SP 800-series), threat analysis, and defensive engineering.
 
 > **Focus areas:** Security analysis · Risk & audit · Network defense · Incident response
 
@@ -12,29 +12,41 @@ I'm a cybersecurity practitioner and technology consultant with hands-on experie
 
 **Career direction:** Security Engineer · SOC Analyst · Penetration Tester
 
-See my full [Professional Statement](./Professional%20Statement%20/Professional%20Statement.md).
+See my full [Professional Statement](./professional-statement.md).
 
 ---
 
-## Projects
+## Repository Structure
 
-### Security Risk Assessment & Audit
-- **`Audit-Scope-and-Goals.docx`** — Definition of audit scope, goals, and boundaries aligned to the NIST Cybersecurity Framework.
-- **`Botium-Toys-Scope-goals-and-risk-assessment-report.docx`** — Full internal security risk assessment for a sample organization (Botium Toys): asset inventory, risk scoring, controls gap analysis, and remediation recommendations.
-- **`Security-risk-assessment-report.docx`** — Structured security risk assessment report documenting threats, vulnerabilities, likelihood/impact, and prioritized mitigations.
+```
+cybersecurity-portfolio/
+├── README.md
+├── professional-statement.md
+├── labs/                       # Hands-on technical labs (one folder per lab)
+│   ├── secure-query-lab/             # SQL filtering for log investigation
+│   ├── linux-permissions-lab/        # Linux file permissions & least privilege
+│   └── jython-installation-validation/  # Jython (Python on the JVM) — in progress
+├── incident-response/          # Incident analysis & response deliverables
+├── network-security/           # Traffic analysis, packet capture, hardening
+├── risk-assessment/            # Security risk assessments & NIST CSF audits
+├── threat-intelligence/        # IOC research, ATT&CK mapping (planned)
+├── malware-analysis/           # Static/dynamic analysis in isolated lab (planned)
+└── security-automation/        # Detection & triage automation (planned)
+```
 
-### Network Traffic Analysis & Incident Response
-- **[`Network_security_analysis.md`](./Network_security_analysis.md)** — Markdown writeup of a DNS/ICMP outage reconstructed from a packet capture: summary, packet-level data analysis, root cause, and remediation.
-- **`21capture.pcapng`** — Raw packet capture used for protocol and traffic analysis (open with Wireshark/tshark).
-- **`Cybersecurity incident report network traffic analysis.pdf`** / **`Cybersecurity-incident-report-network-traffic-analysis.docx`** — Incident analysis report reconstructing an event from captured network traffic, including timeline, indicators, root cause, and response actions.
-- **`Cybersecurity_Incident_Report.docx`** — DNS/ICMP incident report analyzing a failed DNS resolution: a workstation's UDP query to port 53 returned an ICMP "Destination Unreachable – Port Unreachable," halting name resolution. Documents the problem summary, packet-level data analysis, root cause, and remediation.
+---
 
-### Linux & SQL Security Labs
-- **[`Linux_permissions_lab.md`](./Linux_permissions_lab.md)** — Auditing and correcting Linux file permissions in a multi-user research directory, applying least privilege with `chmod`.
-- **[`Secure_query_lab.md`](./Secure_query_lab.md)** — Investigating suspicious authentication activity with SQL filters across login and employee tables.
+## Domains
 
-### Network Hardening
-- **`Network-hardening-tools.xlsx`** — Catalog of network-hardening techniques and tools mapped to the controls they enforce (segmentation, firewall rules, access control, monitoring).
+| Domain | Contents |
+|---|---|
+| [labs](./labs/) | SQL filtering, Linux permissions, Jython install & validation |
+| [incident-response](./incident-response/) | DNS/ICMP outage and network-traffic incident reports |
+| [network-security](./network-security/) | Packet-capture analysis writeup, `.pcapng` capture, hardening catalog |
+| [risk-assessment](./risk-assessment/) | Botium Toys audit, audit scope & goals, risk assessment reports (NIST CSF) |
+| [threat-intelligence](./threat-intelligence/) | 🚧 Planned |
+| [malware-analysis](./malware-analysis/) | 🚧 Planned |
+| [security-automation](./security-automation/) | 🚧 Planned |
 
 ---
 
@@ -53,21 +65,7 @@ See my full [Professional Statement](./Professional%20Statement%20/Professional%
 
 ## Tools & Technologies
 
-`Wireshark` · `tcpdump` · `Suricata` · `pfSense` · `UniFi` · `pfBlockerNG` · `Unbound DNS` · `Linux` · `SQL` · `NIST CSF` · `NIST SP 800-series` · `Python` · `Bash`
-
----
-
-## How to Use This Repository
-
-Most reports are provided as `.docx` / `.pdf`. The packet capture (`.pcapng`) can be opened in Wireshark, or inspected from the command line:
-
-```bash
-# Quick protocol summary
-tshark -r 21capture.pcapng -q -z io,phs
-
-# Top conversations
-tshark -r 21capture.pcapng -q -z conv,ip
-```
+`Wireshark` · `tcpdump` · `Suricata` · `pfSense` · `UniFi` · `pfBlockerNG` · `Unbound DNS` · `Linux` · `SQL` · `Jython` · `NIST CSF` · `NIST SP 800-series` · `Python` · `Bash`
 
 ---
 
