@@ -61,7 +61,7 @@ Flagship work lives in dedicated repositories, summarized as artifacts in [`proj
 | Project | Status | What it demonstrates |
 |---|---|---|
 | [AI Operator Cyber Command Center](./projects/ai-operator-cyber-command-center.md) | Active — all 8 agent blueprints built | Local-first SOC automation: agentic triage (0–100 severity), MITRE ATT&CK mapping, threat-intel enrichment, RAG pipeline, policy-gated MCP tools, Ed25519-signed tamper-evident audit log, Sigma detections, Streamlit dashboard. Ten reproducible case studies. |
-| [AI Agentic MCPscan](./projects/ai-agentic-mcpscan.md) | Beta v0.3.0 — [on PyPI](https://pypi.org/project/ai-agentic-mcpscan/) | Offline-by-default posture scanner for MCP/AI-agent setups: finds exposed servers, plaintext secrets, over-broad tool scopes, unpinned packages; A–F grading; threat-model-driven spec, SBOM'd releases, cross-platform CI. |
+| [AI Agentic MCPscan](./projects/ai-agentic-mcpscan.md) | v0.10.0 [on PyPI](https://pypi.org/project/ai-agentic-mcpscan/) — declared stable for 1.0 | Offline-by-default posture scanner for MCP/AI-agent setups: 7 host adapters (Claude, Cursor, Windsurf, Cline, VS Code, Zed, Continue), A–F grading, SARIF 2.1.0 + GitHub code scanning, opt-in `--fix`, authorization-gated LAN scanning; threat-model-driven spec, SBOM'd releases, cross-platform CI. |
 | [AppSec Supply Chain Lab](./projects/appsec-supply-chain-lab.md) | 🚧 In progress | Detecting & remediating software supply chain vulnerabilities across package ecosystems. |
 
 ---
