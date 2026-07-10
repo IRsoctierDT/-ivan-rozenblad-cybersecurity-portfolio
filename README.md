@@ -1,32 +1,56 @@
 # Ivan Rozenblad — Cybersecurity Portfolio
 
-A working portfolio of hands-on cybersecurity projects spanning AI-driven security
-automation, risk assessment, security auditing, network traffic analysis, incident
-response, and security tooling. The artifacts here demonstrate practical application of
-security frameworks (NIST CSF, NIST SP 800-series, MITRE ATT&CK), threat analysis, and
-defensive engineering.
+> **Security engineering at the intersection of AI and defense — built, shipped, and proven.**
 
-> **Focus areas:** AI × defensive security · Security automation · Risk & audit · Network defense · Incident response
+A working portfolio of hands-on cybersecurity engineering: AI-driven SOC automation,
+published open-source security tooling, NIST CSF-aligned risk assessment and auditing,
+network traffic analysis, incident response, and system hardening. Every artifact here
+is built the way production security work should be — **threat-modeled, documented,
+tested behind CI security gates, and reproducible** — because a control that isn't
+documented and testable isn't a control.
+
+> **Focus areas:** AI × defensive security · Security automation & detection engineering · Risk & audit · Network defense · Incident response
 
 ---
 
 ## About Me
 
-I'm a cybersecurity practitioner and technology consultant with hands-on experience in
-network engineering, security operations, and secure systems design. My work centers on
-defense-in-depth, least-privilege design, network segmentation, and auditable,
-well-documented security controls. I operate a home security lab built on pfSense
-(Netgate 4200), UniFi infrastructure, VLAN segmentation, Suricata IDS/IPS, pfBlockerNG,
-and Unbound DNS.
+I'm Ivan Rozenblad, a cybersecurity practitioner and technology consultant based in the
+San Francisco Bay Area. I came to security the operator's way — through years of
+hands-on network engineering, systems work, and consulting — and that path left me with
+the conviction that runs through everything in this portfolio: **security only works
+when it's engineered in, not bolted on.** Controls have to be designed, documented,
+tested, and auditable, or they don't survive contact with a real environment.
 
-My current focus is the **intersection of AI and defensive security**: building agentic
-SOC automation (triage, MITRE mapping, RAG-grounded incident reporting) and securing the
-AI-agent ecosystem itself with [MCPscan](./projects/ai-agentic-mcpscan.md), an
-open-source posture scanner published on PyPI.
+What distinguishes my work:
 
-**Career direction:** Security Engineer · SOC / Detection Engineer · AI Security Engineer
+- **I ship, not just study.** My security tooling is published and installable today:
+  [AI Agentic MCPscan](./projects/ai-agentic-mcpscan.md) is live on
+  [PyPI](https://pypi.org/project/ai-agentic-mcpscan/) with SBOM'd, checksummed releases
+  behind a cross-platform CI gate, and the
+  [AI Operator Cyber Command Center](./projects/ai-operator-cyber-command-center.md) is
+  a fully built SOC automation platform documented in ten reproducible case studies.
+- **I work both sides of the AI/security boundary.** Using AI to scale defense —
+  agentic log triage, MITRE ATT&CK mapping, RAG-grounded incident reporting — and
+  securing the AI-agent ecosystem itself: MCP posture scanning, policy-gated tool
+  surfaces, and tamper-evident (hash-chained, Ed25519-signed) audit logging.
+- **I run what I recommend.** My home security lab — pfSense (Netgate 4200), UniFi
+  infrastructure, VLAN segmentation, Suricata IDS/IPS, pfBlockerNG, and Unbound DNS —
+  is where every detection rule, hardening change, and network policy gets tested
+  before I write about it.
+- **Governance-first engineering.** Written threat models, architecture decision
+  records, default-deny policy-as-code, human-in-the-loop gates for anything
+  irreversible, and CI pipelines that treat security as a quality gate: bandit,
+  gitleaks, pip-audit, ruff, mypy --strict, and enforced coverage thresholds.
+- **I document like an auditor is reading.** Executive summaries, structured incident
+  reports, audit-scoped risk assessments, and case studies with worked examples — every
+  deliverable in this portfolio is written to be handed to a client, a reviewer, or a
+  hiring manager as-is.
 
-See my full [Professional Statement](./professional-statement.md).
+**Career direction:** Security Engineer · SOC / Detection Engineer · AI Security Engineer — open to consulting engagements.
+
+See my full [Professional Statement](./professional-statement.md) for my security
+philosophy, what I'm building right now, and where I'm headed.
 
 ---
 
@@ -37,7 +61,7 @@ Flagship work lives in dedicated repositories, summarized as artifacts in [`proj
 | Project | Status | What it demonstrates |
 |---|---|---|
 | [AI Operator Cyber Command Center](./projects/ai-operator-cyber-command-center.md) | Active — all 8 agent blueprints built | Local-first SOC automation: agentic triage (0–100 severity), MITRE ATT&CK mapping, threat-intel enrichment, RAG pipeline, policy-gated MCP tools, Ed25519-signed tamper-evident audit log, Sigma detections, Streamlit dashboard. Ten reproducible case studies. |
-| [AI Agentic MCPscan](./projects/ai-agentic-mcpscan.md) | Beta v0.3.0 — [on PyPI](https://pypi.org/project/ai-agentic-mcpscan/) | Offline-by-default posture scanner for MCP/AI-agent setups: finds exposed servers, plaintext secrets, over-broad tool scopes, unpinned packages; A–F grading; threat-model-driven spec, SBOM'd releases, cross-platform CI. |
+| [AI Agentic MCPscan](./projects/ai-agentic-mcpscan.md) | v0.10.0 [on PyPI](https://pypi.org/project/ai-agentic-mcpscan/) — declared stable for 1.0 | Offline-by-default posture scanner for MCP/AI-agent setups: 7 host adapters (Claude, Cursor, Windsurf, Cline, VS Code, Zed, Continue), A–F grading, SARIF 2.1.0 + GitHub code scanning, opt-in `--fix`, authorization-gated LAN scanning; threat-model-driven spec, SBOM'd releases, cross-platform CI. |
 | [AppSec Supply Chain Lab](./projects/appsec-supply-chain-lab.md) | 🚧 In progress | Detecting & remediating software supply chain vulnerabilities across package ecosystems. |
 
 ---
