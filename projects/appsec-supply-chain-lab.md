@@ -23,7 +23,6 @@ remediate software supply chain vulnerabilities across multiple package ecosyste
 
 Supply chain compromise is one of the highest-leverage attack classes today, and the
 skills transfer directly from the release-engineering work in
-[MCPscan](./ai-agentic-mcpscan.md) (SBOM + checksums on every release, pip-audit in CI)
-and the governance pipeline in the
-[Cyber Command Center](./ai-operator-cyber-command-center.md). This lab turns those
+[MCPscan](./ianua-broker-mcpscan.md) (SBOM + checksums on every release, pip-audit and
+CodeQL in CI) and the governance pipeline in [IANUA](./ianua.md). This lab turns those
 practices into standalone, reproducible artifacts.

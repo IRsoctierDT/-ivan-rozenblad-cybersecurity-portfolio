@@ -1,8 +1,8 @@
-# AI Agentic MCPscan
+# IANUA-Broker — AI Agentic MCPscan
 
-**Repo:** [IRsoctierDT/ai-agentic-mcpscan](https://github.com/IRsoctierDT/ai-agentic-mcpscan)
-**Released:** [PyPI — `ai-agentic-mcpscan`](https://pypi.org/project/ai-agentic-mcpscan/) (v0.10.0, declared stable for 1.0 — stable CLI surface, JSON schema, and check ids under semver) · Apache-2.0
-**Stack:** Python 3.11+ · CLI (`mcpscan`) · CI on macOS/Linux/Windows × Python 3.11–3.13
+**Repo:** [IRsoctierDT/IANUA-Broker](https://github.com/IRsoctierDT/IANUA-Broker) *(formerly `ai-agentic-mcpscan`)*
+**Released:** [PyPI — `ai-agentic-mcpscan`](https://pypi.org/project/ai-agentic-mcpscan/) — **Stable `v1.x`** (v1.4.0): stable CLI surface, JSON schema, and check ids covered by semver · Apache-2.0
+**Stack:** Python 3.11+ · CLI (`mcpscan`) · CI on macOS/Linux/Windows × Python 3.11–3.13 · CodeQL
 
 ---
 
@@ -18,6 +18,9 @@ MCPscan finds those issues and tells you which to fix first.
 
 - **Discovers** MCP servers via socket/process enumeration (catching `0.0.0.0` /
   non-loopback exposure) plus a loopback probe of `/mcp` and `/sse`.
+- **Inventories** (`mcpscan inventory`) the machine's AI infrastructure as a classified,
+  typed asset list — agent hosts, MCP servers, model servers, inference endpoints, LLM
+  gateways, vector DBs — with per-asset evidence and confidence.
 - **Statically audits** agent configs across **seven host ecosystems** — Claude
   (`.claude/settings.json`, `.mcp.json`, `claude_desktop_config.json`), **Cursor**,
   **Windsurf**, **Cline**, **VS Code** (native MCP), **Zed** (JSONC), and **Continue**
@@ -37,9 +40,9 @@ MCPscan finds those issues and tells you which to fix first.
 ## Security engineering demonstrated
 
 - **Threat-model-driven build** — full product spec with testable requirements and
-  scoring rubric ([SPEC.md](https://github.com/IRsoctierDT/ai-agentic-mcpscan/blob/main/docs/SPEC.md)),
+  scoring rubric ([SPEC.md](https://github.com/IRsoctierDT/IANUA-Broker/blob/main/docs/SPEC.md)),
   15 architecture decision records, and a threat-model verification matrix signed off in
-  [SECURITY_SIGNOFF.md](https://github.com/IRsoctierDT/ai-agentic-mcpscan/blob/main/docs/SECURITY_SIGNOFF.md).
+  [SECURITY_SIGNOFF.md](https://github.com/IRsoctierDT/IANUA-Broker/blob/main/docs/SECURITY_SIGNOFF.md).
 - **Trust properties by design** — localhost only by default; offline + zero telemetry
   by default (`--online` is opt-in and discloses egress); secrets redacted everywhere;
   advise-only unless `--fix` is explicitly passed (safe, reversible, backed-up edits
@@ -49,13 +52,12 @@ MCPscan finds those issues and tells you which to fix first.
   touched and an operator guide documenting lawful use.
 - **Release engineering** — semantic-versioned releases via release-please, SBOM +
   checksums on every release, green CI gate (ruff, mypy --strict, bandit, pytest) across
-  three OSes and three Python versions, and a measurable dogfood corpus harness as a
-  pre-1.0 quality gate.
+  three OSes and three Python versions, CodeQL analysis, and a measurable dogfood corpus
+  harness as a release quality gate.
 
-## Road to 1.0 — shipped
+## Release history
 
-The entire 1.0 feature set is built and declared stable: SARIF output + GitHub
-code-scanning workflow, seven host adapters, opt-in `--fix`, and authorized-LAN scanning
-behind an explicit policy gate. Ten minor releases (v0.1.0 → v0.10.0), each shipped
-behind the full CI gate. Next: real-world dogfooding and keeping pace with the
-fast-moving MCP ecosystem.
+Stable 1.0 shipped on schedule with the full planned feature set — SARIF + GitHub code
+scanning, seven host adapters, opt-in `--fix`, and authorization-gated LAN scanning —
+and the `v1.x` line has kept moving (AI-asset inventory, dependency hardening, CodeQL).
+Every release ships behind the full CI gate with SBOM and checksums.
