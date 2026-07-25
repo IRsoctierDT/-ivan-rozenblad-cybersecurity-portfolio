@@ -25,15 +25,20 @@ tested, and auditable, or they don't survive contact with a real environment.
 What distinguishes my work:
 
 - **I ship, not just study.** My security tooling is published and installable today:
-  [AI Agentic MCPscan](./projects/ai-agentic-mcpscan.md) is live on
+  [MCPscan](./projects/ianua-broker-mcpscan.md) is **stable v1.x** on
   [PyPI](https://pypi.org/project/ai-agentic-mcpscan/) with SBOM'd, checksummed releases
-  behind a cross-platform CI gate, and the
-  [AI Operator Cyber Command Center](./projects/ai-operator-cyber-command-center.md) is
-  a fully built SOC automation platform documented in ten reproducible case studies.
+  behind a cross-platform CI gate, and [IANUA](./projects/ianua.md) is a fully built SOC
+  automation platform documented in eleven reproducible case studies.
 - **I work both sides of the AI/security boundary.** Using AI to scale defense —
   agentic log triage, MITRE ATT&CK mapping, RAG-grounded incident reporting — and
-  securing the AI-agent ecosystem itself: MCP posture scanning, policy-gated tool
+  securing the AI-agent ecosystem itself: MCP posture scanning, zero-trust agent
+  identity ([Agent Trust Broker](./projects/agent-trust-broker.md)), policy-gated tool
   surfaces, and tamper-evident (hash-chained, Ed25519-signed) audit logging.
+- **I write the standard, then implement it.** [EAODS](./projects/eaods.md) is my
+  enterprise governance framework for AI-assisted organizations; its zero-trust identity
+  pattern is reference-implemented by the Agent Trust Broker and enforced on every tool
+  dispatch inside IANUA — a full standard → control → implementation → conformance-test
+  chain.
 - **I run what I recommend.** My home security lab — pfSense (Netgate 4200), UniFi
   infrastructure, VLAN segmentation, Suricata IDS/IPS, pfBlockerNG, and Unbound DNS —
   is where every detection rule, hardening change, and network policy gets tested
@@ -58,10 +63,15 @@ philosophy, what I'm building right now, and where I'm headed.
 
 Flagship work lives in dedicated repositories, summarized as artifacts in [`projects/`](./projects/):
 
+Most of this work ships under the **IANUA** umbrella — a platform, a scanner, a
+zero-trust identity layer, and the governance framework that binds them.
+
 | Project | Status | What it demonstrates |
 |---|---|---|
-| [AI Operator Cyber Command Center](./projects/ai-operator-cyber-command-center.md) | Active — all 8 agent blueprints built | Local-first SOC automation: agentic triage (0–100 severity), MITRE ATT&CK mapping, threat-intel enrichment, RAG pipeline, policy-gated MCP tools, Ed25519-signed tamper-evident audit log, Sigma detections, Streamlit dashboard. Ten reproducible case studies. |
-| [AI Agentic MCPscan](./projects/ai-agentic-mcpscan.md) | v0.10.0 [on PyPI](https://pypi.org/project/ai-agentic-mcpscan/) — declared stable for 1.0 | Offline-by-default posture scanner for MCP/AI-agent setups: 7 host adapters (Claude, Cursor, Windsurf, Cline, VS Code, Zed, Continue), A–F grading, SARIF 2.1.0 + GitHub code scanning, opt-in `--fix`, authorization-gated LAN scanning; threat-model-driven spec, SBOM'd releases, cross-platform CI. |
+| [IANUA — AI Operations & Cyber Command Center](./projects/ianua.md) | Active — all agents built; zero-trust + compliance layers landing | Local-first SOC automation: agentic triage (0–100 severity), MITRE ATT&CK mapping, threat-intel enrichment, RAG pipeline, policy-gated MCP tools with a trust-broker identity gate, Ed25519-signed tamper-evident audit log, Sigma correlation rules, compliance layer (controls, evidence, trust page), pending-approvals queue. Eleven reproducible case studies. |
+| [IANUA-Broker — AI Agentic MCPscan](./projects/ianua-broker-mcpscan.md) | **Stable v1.x** (v1.4.0) [on PyPI](https://pypi.org/project/ai-agentic-mcpscan/) | Offline-by-default posture scanner + AI-asset inventory for MCP/AI-agent setups: 7 host adapters (Claude, Cursor, Windsurf, Cline, VS Code, Zed, Continue), A–F grading, SARIF 2.1.0 + GitHub code scanning, opt-in `--fix`, authorization-gated LAN scanning; threat-model-driven spec, SBOM'd releases, cross-platform CI + CodeQL. |
+| [Agent Trust Broker](./projects/agent-trust-broker.md) | Active — v0.1 reference implementation, wired into IANUA | Zero-trust identity for AI-agent fleets: short-lived scoped identities, attenuating delegation, allow/deny/escalate policy, hash-chained audit with human escalation queue, T1–T12 conformance test matrix. Fail-closed, stdlib-only. |
+| [EAODS — Enterprise AI Operator Documentation Suite](./projects/eaods.md) | Active — release line v17.0–v17.3 | Enterprise architecture, governance & cyber-defense framework for AI-assisted organizations, with schema-validated docs, traceability, and CI quality gates; patterns trace into running code (ATB → IANUA). |
 | [AppSec Supply Chain Lab](./projects/appsec-supply-chain-lab.md) | 🚧 In progress | Detecting & remediating software supply chain vulnerabilities across package ecosystems. |
 
 ---
@@ -73,8 +83,10 @@ cybersecurity-portfolio/
 ├── README.md
 ├── professional-statement.md
 ├── projects/                   # Artifacts for flagship external repos
-│   ├── ai-operator-cyber-command-center.md
-│   ├── ai-agentic-mcpscan.md
+│   ├── ianua.md                      # IANUA — AI ops & cyber command center
+│   ├── ianua-broker-mcpscan.md       # IANUA-Broker — MCPscan (stable v1.x, PyPI)
+│   ├── agent-trust-broker.md         # Zero-trust identity for agent fleets
+│   ├── eaods.md                      # Enterprise AI governance framework
 │   └── appsec-supply-chain-lab.md
 ├── labs/                       # Hands-on technical labs (one folder per lab)
 │   ├── secure-query-lab/             # SQL filtering for log investigation
@@ -94,9 +106,9 @@ cybersecurity-portfolio/
 
 | Domain | Contents |
 |---|---|
-| [projects](./projects/) | AI Operator Cyber Command Center, MCPscan, AppSec supply chain lab |
-| [security-automation](./security-automation/) | Agentic SOC triage, Sigma detection loop, MCP posture scanning in CI |
-| [threat-intelligence](./threat-intelligence/) | IOC triage agent, MITRE ATT&CK mapper (case studies) |
+| [projects](./projects/) | IANUA, IANUA-Broker (MCPscan), Agent Trust Broker, EAODS, AppSec supply chain lab |
+| [security-automation](./security-automation/) | Agentic SOC triage, Sigma correlation loop, zero-trust tool gating, MCP posture scanning in CI |
+| [threat-intelligence](./threat-intelligence/) | IOC triage agent, MITRE ATT&CK mapper, Sigma correlation rules (case studies) |
 | [labs](./labs/) | SQL filtering, Linux permissions, Jython install & validation |
 | [incident-response](./incident-response/) | DNS/ICMP outage and network-traffic incident reports |
 | [network-security](./network-security/) | Packet-capture analysis writeup, `.pcapng` capture, hardening catalog |
@@ -109,9 +121,11 @@ cybersecurity-portfolio/
 
 | Domain | Highlights |
 |---|---|
-| AI Security & Automation | Agentic SOC pipelines, RAG knowledge grounding, MCP tool-surface security, policy-as-code, human-in-the-loop gating, tamper-evident (hash-chained, Ed25519-signed) audit logging |
-| Detection Engineering | MITRE ATT&CK mapping, Sigma detection content, triage-to-detection feedback loop |
-| Secure SDLC / DevSecOps | CI security gates (bandit, gitleaks, pip-audit, ruff, mypy --strict), 85% coverage gates, SBOM + checksummed releases, threat-model-driven specs & ADRs |
+| AI Security & Automation | Agentic SOC pipelines, RAG knowledge grounding, MCP tool-surface security, AI-asset inventory, policy-as-code, human-in-the-loop gating, tamper-evident (hash-chained, Ed25519-signed) audit logging |
+| Zero Trust & Identity | Short-lived scoped service identities, attenuating delegation, cascade revocation, allow/deny/escalate policy enforcement, fail-closed design, conformance test matrices |
+| Governance & Compliance | Enterprise governance frameworks (EAODS), controls & evidence automation, standard → control → implementation traceability, NIST CSF alignment |
+| Detection Engineering | MITRE ATT&CK mapping, Sigma detection content & correlation rules, triage-to-detection feedback loop |
+| Secure SDLC / DevSecOps | CI security gates (bandit, gitleaks, pip-audit, ruff, mypy --strict, CodeQL), 85% coverage gates, SBOM + checksummed releases, threat-model-driven specs & ADRs |
 | Risk Management | Asset inventory, risk scoring, controls gap analysis, NIST CSF alignment |
 | Network Security | VLAN segmentation, firewall policy, IDS/IPS (Suricata), DNS security |
 | Traffic Analysis | Packet capture review, protocol analysis, IoC identification (Wireshark/tcpdump) |
@@ -123,10 +137,11 @@ cybersecurity-portfolio/
 
 ## Tools & Technologies
 
-`Python` · `MITRE ATT&CK` · `Sigma` · `MCP` · `RAG / Ollama / Qdrant` · `Streamlit` ·
-`bandit` · `gitleaks` · `pip-audit` · `mypy` · `ruff` · `Wireshark` · `tcpdump` ·
-`Suricata` · `pfSense` · `UniFi` · `pfBlockerNG` · `Unbound DNS` · `Linux` · `SQL` ·
-`Bash` · `NIST CSF` · `NIST SP 800-series` · `Jython`
+`Python` · `MITRE ATT&CK` · `Sigma` · `MCP` · `Zero Trust` · `Ed25519` ·
+`RAG / Ollama / Qdrant` · `Streamlit` · `bandit` · `gitleaks` · `pip-audit` · `mypy` ·
+`ruff` · `CodeQL` · `SARIF` · `MkDocs` · `Wireshark` · `tcpdump` · `Suricata` ·
+`pfSense` · `UniFi` · `pfBlockerNG` · `Unbound DNS` · `Linux` · `SQL` · `Bash` ·
+`NIST CSF` · `NIST SP 800-series` · `Jython`
 
 ---
 
