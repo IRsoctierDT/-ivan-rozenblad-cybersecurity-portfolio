@@ -117,6 +117,27 @@ cybersecurity-portfolio/
 
 ---
 
+## Build & Release Status
+
+Live build, release, and license status for my flagship public repositories — the "what it
+does" details and case studies are in [🚀 Active Projects](#-active-projects) above. Every
+badge reads live from GitHub, so this table stays current on its own.
+
+| Repository | Version / Release | CI & Security | License |
+|---|---|---|---|
+| **[IANUA](https://github.com/IRsoctierDT/IANUA)** | [![release](https://img.shields.io/github/v/release/IRsoctierDT/IANUA?sort=semver&label=)](https://github.com/IRsoctierDT/IANUA/releases) | [![CI](https://github.com/IRsoctierDT/IANUA/actions/workflows/ci.yml/badge.svg)](https://github.com/IRsoctierDT/IANUA/actions/workflows/ci.yml) [![Security](https://github.com/IRsoctierDT/IANUA/actions/workflows/security-scan.yml/badge.svg)](https://github.com/IRsoctierDT/IANUA/actions/workflows/security-scan.yml) | ![last commit](https://img.shields.io/github/last-commit/IRsoctierDT/IANUA?label=updated) |
+| **[IANUA-Broker](https://github.com/IRsoctierDT/IANUA-Broker)** | [![release](https://img.shields.io/github/v/release/IRsoctierDT/IANUA-Broker?label=)](https://github.com/IRsoctierDT/IANUA-Broker/releases) [![PyPI](https://img.shields.io/pypi/v/ai-agentic-mcpscan?label=PyPI)](https://pypi.org/project/ai-agentic-mcpscan/) | [![CI](https://github.com/IRsoctierDT/IANUA-Broker/actions/workflows/ci.yml/badge.svg)](https://github.com/IRsoctierDT/IANUA-Broker/actions/workflows/ci.yml) [![CodeQL](https://github.com/IRsoctierDT/IANUA-Broker/actions/workflows/codeql.yml/badge.svg)](https://github.com/IRsoctierDT/IANUA-Broker/actions/workflows/codeql.yml) | [![license](https://img.shields.io/github/license/IRsoctierDT/IANUA-Broker?label=)](https://github.com/IRsoctierDT/IANUA-Broker/blob/main/LICENSE) |
+| **[agent-trust-broker](https://github.com/IRsoctierDT/agent-trust-broker)** | ![status](https://img.shields.io/badge/release-v0.1%20(unreleased)-lightgrey) | [![Quality](https://github.com/IRsoctierDT/agent-trust-broker/actions/workflows/quality.yml/badge.svg)](https://github.com/IRsoctierDT/agent-trust-broker/actions/workflows/quality.yml) [![CodeQL](https://github.com/IRsoctierDT/agent-trust-broker/actions/workflows/codeql.yml/badge.svg)](https://github.com/IRsoctierDT/agent-trust-broker/actions/workflows/codeql.yml) | [![license](https://img.shields.io/github/license/IRsoctierDT/agent-trust-broker?label=)](https://github.com/IRsoctierDT/agent-trust-broker/blob/main/LICENSE) |
+| **[EAODS-v3-Enterprise-Edition](https://github.com/IRsoctierDT/EAODS-v3-Enterprise-Edition)** | ![status](https://img.shields.io/badge/status-active-brightgreen) | [![Docs quality](https://github.com/IRsoctierDT/EAODS-v3-Enterprise-Edition/actions/workflows/docs-quality.yml/badge.svg)](https://github.com/IRsoctierDT/EAODS-v3-Enterprise-Edition/actions/workflows/docs-quality.yml) [![Pages](https://github.com/IRsoctierDT/EAODS-v3-Enterprise-Edition/actions/workflows/pages.yml/badge.svg)](https://github.com/IRsoctierDT/EAODS-v3-Enterprise-Edition/actions/workflows/pages.yml) | ![last commit](https://img.shields.io/github/last-commit/IRsoctierDT/EAODS-v3-Enterprise-Edition?label=updated) |
+
+- **IANUA** ships signed, reproducible builds — latest release **v1.9.0** carries CycloneDX SBOM + SLSA build-provenance attestations, 390 tests green behind an ≥85% coverage gate.
+- **IANUA-Broker / MCPscan** cuts releases automatically via release-please, published to [PyPI](https://pypi.org/project/ai-agentic-mcpscan/) with CodeQL scanning and an SBOM on every build.
+
+> _Note:_ the public repos `EAODS` and `portfolio-appsec-lab` are currently empty
+> scaffolding (no released content yet), so they're omitted from this table.
+
+---
+
 ## Skills Demonstrated
 
 | Domain | Highlights |
