@@ -8,4 +8,4 @@ self-contained folder with its own `README.md`, and (where relevant) `screenshot
 |---|---|---|
 | [secure-query-lab](./secure-query-lab/) | SQL filtering for log investigation (`AND`/`OR`/`NOT`/`LIKE`) | ✅ Complete |
 | [linux-permissions-lab](./linux-permissions-lab/) | Linux file permissions & least privilege with `chmod` | ✅ Complete |
-| [jython-installation-validation](./jython-installation-validation/) | Jython (Python on the JVM) install & environment validation | 🚧 In progress |
+| [jython-installation-validation](./jython-installation-validation/) | Jython (Python on the JVM) install & environment validation | ✅ Writeup complete — screenshots pending |
