@@ -96,7 +96,7 @@ cybersecurity-portfolio/
 ├── network-security/           # Traffic analysis, packet capture, hardening
 ├── risk-assessment/            # Security risk assessments & NIST CSF audits
 ├── threat-intelligence/        # IOC triage & ATT&CK mapping (via command center)
-├── malware-analysis/           # Static/dynamic analysis in isolated lab (planned)
+├── malware-analysis/           # Static/dynamic analysis in isolated lab (methodology defined)
 └── security-automation/        # SOC automation & security tooling (active)
 ```
 
@@ -113,7 +113,7 @@ cybersecurity-portfolio/
 | [incident-response](./incident-response/) | DNS/ICMP outage and network-traffic incident reports |
 | [network-security](./network-security/) | Packet-capture analysis writeup, `.pcapng` capture, hardening catalog |
 | [risk-assessment](./risk-assessment/) | Botium Toys audit, audit scope & goals, risk assessment reports (NIST CSF) |
-| [malware-analysis](./malware-analysis/) | 🚧 Planned |
+| [malware-analysis](./malware-analysis/) | Defensive analysis methodology (isolated lab), ATT&CK mapping → YARA/Sigma detection content |
 
 ---
 
