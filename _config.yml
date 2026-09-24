@@ -1,0 +1,12 @@
+title: Ivan Rozenblad — Cybersecurity Portfolio
+description: >-
+  Security engineering at the AI × defense boundary: IANUA SOC automation,
+  MCP posture scanning, zero-trust agent identity, EAODS governance, and
+  hands-on IR / risk / network lab artifacts.
+url: https://irsoctierdt.github.io
+baseurl: "/-ivan-rozenblad-cybersecurity-portfolio"
+markdown: kramdown
+theme: null
+plugins: []
+exclude:
+  - README.md
