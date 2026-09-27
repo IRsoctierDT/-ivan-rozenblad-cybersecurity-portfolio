@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ivan Rozenblad — Cybersecurity Portfolio</title>
+  <meta name="description" content="Security engineering at the AI × defense boundary: IANUA SOC automation, MCP posture scanning (ianua-broker on PyPI), zero-trust agent identity, EAODS governance, and hands-on lab artifacts.">
+  <link rel="canonical" href="https://irsoctierdt.github.io/-ivan-rozenblad-cybersecurity-portfolio/">
+  <meta property="og:title" content="Ivan Rozenblad — Cybersecurity Portfolio">
+  <meta property="og:description" content="Built, shipped, and documented defensive security work — SOC automation, AI-agent security, risk &amp; IR artifacts.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://irsoctierdt.github.io/-ivan-rozenblad-cybersecurity-portfolio/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="./">
+        <img src="assets/img/favicon.svg" alt="" width="28" height="28">
+        <span>Ivan Rozenblad</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#artifacts">Artifacts</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="professional-statement.md">Statement</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <p class="eyebrow">Security engineering · AI × defense · Bay Area</p>
+      <h1>Build the control. Prove it. Ship it.</h1>
+      <p class="lede">
+        I’m Ivan Rozenblad — cybersecurity practitioner and operator-turned-engineer.
+        This portfolio is working product and lab evidence: SOC automation, MCP/agent posture,
+        zero-trust agent identity, governance frameworks, and incident/risk artifacts written
+        the way an auditor would expect to read them.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">See shipped work</a>
+        <a class="btn btn-ghost" href="https://github.com/IRsoctierDT">GitHub</a>
+        <a class="btn btn-ghost" href="mailto:irozenblad@icloud.com">Email</a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="projects">
+      <h2>Featured projects</h2>
+      <p class="sub">Public repositories and docs sites — not slideware. Status reflects Sep 2026.</p>
+      <div class="grid grid-2">
+        <article class="card">
+          <div class="meta"><span class="tag">Flagship</span><span class="tag">SOC / AI ops</span></div>
+          <h3>IANUA</h3>
+          <p>Local-first AI operations &amp; cyber command center: agentic triage, MITRE ATT&amp;CK mapping, RAG, policy-gated tools, tamper-evident audit, compliance/trust surface. Documented with reproducible case studies.</p>
+          <div class="card-links">
+            <a href="https://github.com/IRsoctierDT/IANUA">Repo</a>
+            <a href="https://irsoctierdt.github.io/IANUA/">Docs site</a>
+            <a href="projects/ianua.md">Portfolio note</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag">PyPI 1.5.2</span><span class="tag">MCP / agent security</span></div>
+          <h3>IANUA-Broker <span style="font-weight:500;color:var(--muted)">(mcpscan)</span></h3>
+          <p>Offline-by-default posture scanner for MCP servers and local AI-agent setups. Inventories hosts, grades exposure, emits SARIF; CLI <code>mcpscan</code> published as <code>ianua-broker</code> on PyPI.</p>
+          <div class="card-links">
+            <a href="https://github.com/IRsoctierDT/IANUA-Broker">Repo</a>
+            <a href="https://pypi.org/project/ianua-broker/">PyPI</a>
+            <a href="https://irsoctierdt.github.io/IANUA-Broker/">Docs</a>
+            <a href="projects/ianua-broker-mcpscan.md">Portfolio note</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag">Zero-trust</span><span class="tag">Agent identity</span></div>
+          <h3>Agent Trust Broker</h3>
+          <p>Short-lived scoped identities, attenuating delegation, allow/deny/escalate policy, hash-chained audit — fail-closed reference implementation that gates privileged tool dispatch.</p>
+          <div class="card-links">
+            <a href="https://github.com/IRsoctierDT/agent-trust-broker">Repo</a>
+            <a href="projects/agent-trust-broker.md">Portfolio note</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag">Governance</span><span class="tag">Enterprise AI</span></div>
+          <h3>EAODS v3 Enterprise</h3>
+          <p>Enterprise AI Operator Documentation Suite — architecture, governance, and cyber-defense patterns with schema-validated docs, traceability, and CI quality gates. Patterns land in running code (ATB → IANUA).</p>
+          <div class="card-links">
+            <a href="https://github.com/IRsoctierDT/EAODS-v3-Enterprise-Edition">Repo</a>
+            <a href="https://irsoctierdt.github.io/EAODS-v3-Enterprise-Edition/">Docs</a>
+            <a href="projects/eaods.md">Portfolio note</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag amber">In progress</span><span class="tag">AppSec</span></div>
+          <h3>AppSec supply-chain lab</h3>
+          <p>Detecting and remediating software supply-chain risk across package ecosystems — dependency confusion, typosquatting signals, SBOM-driven vuln management, remediation playbooks.</p>
+          <div class="card-links">
+            <a href="projects/appsec-supply-chain-lab.md">Portfolio note</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag amber">Systems build</span><span class="tag">Privacy</span></div>
+          <h3>Brotherhood Accountability</h3>
+          <p>Private covenant accountability product: local-first check-ins, witnessed commitments, Cloudflare Worker sync, WebAuthn/passkeys, Capacitor App Store path. High-integrity peer systems with strong privacy defaults.</p>
+          <div class="card-links">
+            <a href="#contact">Ask about architecture</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="about">
+      <h2>About</h2>
+      <p class="sub">Emeryville / San Francisco Bay Area · open to Security Engineer, Detection/SOC, and AI Security roles · consulting welcome.</p>
+      <div class="about-grid">
+        <div class="card">
+          <p style="color:var(--text);margin:0 0 0.8rem">
+            I came to security the operator’s way — networks, systems, and consulting work that has to survive production.
+            That left a hard rule: <strong>security only works when it’s engineered in, not bolted on.</strong>
+            Controls need design, documentation, tests, and an audit trail, or they don’t last.
+          </p>
+          <p style="margin:0;color:var(--muted)">
+            I ship on both sides of the AI/security boundary: using agents to scale defensive ops, and securing the agent/MCP ecosystems organizations are adopting. Full philosophy and roadmap live in the
+            <a href="professional-statement.md">professional statement</a>.
+          </p>
+        </div>
+        <div class="card">
+          <ul class="principles">
+            <li><strong>Defense in depth, least privilege by default</strong>Assume a layer fails. Segment, allow-list, default-deny.</li>
+            <li><strong>If it isn’t documented and testable, it isn’t a control</strong>Threat models, ADRs, CI gates, reproducible evidence.</li>
+            <li><strong>Humans approve; machines assist</strong>Automation recommends and prioritizes — people authorize irreversible actions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="skills">
+      <h2>Capabilities</h2>
+      <p class="sub">Tools and domains I use in real builds and lab work — not a keyword dump.</p>
+      <div class="card">
+        <div class="skills">
+          <span class="skill">Detection engineering</span>
+          <span class="skill">SOC automation</span>
+          <span class="skill">MITRE ATT&amp;CK</span>
+          <span class="skill">Sigma / Suricata</span>
+          <span class="skill">MCP &amp; agent security</span>
+          <span class="skill">Zero-trust identity</span>
+          <span class="skill">WebAuthn / passkeys</span>
+          <span class="skill">Cloudflare Workers / D1</span>
+          <span class="skill">Python</span>
+          <span class="skill">TypeScript / vanilla JS</span>
+          <span class="skill">NIST CSF risk &amp; audit</span>
+          <span class="skill">IR documentation</span>
+          <span class="skill">pcap / Wireshark</span>
+          <span class="skill">pfSense / UniFi labs</span>
+          <span class="skill">SBOM / SARIF / CI gates</span>
+          <span class="skill">RAG for defensive ops</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="artifacts">
+      <h2>Selected artifacts</h2>
+      <p class="sub">Hands-on writeups and evidence retained in this repository.</p>
+      <div class="grid grid-3">
+        <article class="card artifact"><a href="incident-response/"><h3>Incident response</h3><p>Traffic analysis IR reports (PDF/DOCX) and DNS/ICMP case notes.</p></a></article>
+        <article class="card artifact"><a href="network-security/"><h3>Network security</h3><p>Hardening notes, analysis writeup, capture evidence.</p></a></article>
+        <article class="card artifact"><a href="risk-assessment/"><h3>Risk assessment</h3><p>NIST-aligned assessments, audit scope, Botium Toys case.</p></a></article>
+        <article class="card artifact"><a href="labs/"><h3>Labs</h3><p>Linux permissions, secure query, Jython validation exercises.</p></a></article>
+        <article class="card artifact"><a href="security-automation/"><h3>Security automation</h3><p>Automation notes and tooling experiments.</p></a></article>
+        <article class="card artifact"><a href="threat-intelligence/"><h3>Threat intelligence</h3><p>Intel collection and analysis workspace.</p></a></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="contact">
+      <h2>Contact</h2>
+      <div class="card contact-box">
+        <div>
+          <strong>Ivan Rozenblad</strong>
+          <p>Emeryville, CA · Security engineering &amp; consulting</p>
+          <p>
+            <a href="mailto:irozenblad@icloud.com">irozenblad@icloud.com</a>
+            ·
+            <a href="https://github.com/IRsoctierDT">github.com/IRsoctierDT</a>
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:irozenblad@icloud.com">Email me</a>
+          <a class="btn btn-ghost" href="professional-statement.md">Read statement</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="y"></span> Ivan Rozenblad · Portfolio source on GitHub</span>
+      <span>Last refreshed Sep 2026</span>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

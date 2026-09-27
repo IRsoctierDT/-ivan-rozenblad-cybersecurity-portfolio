@@ -1,45 +1,43 @@
 # Professional Statement — Ivan Rozenblad
 
-## Who I Am
+**Emeryville, CA** · [GitHub @IRsoctierDT](https://github.com/IRsoctierDT) · irozenblad@icloud.com  
+**Targets:** Security Engineer · Detection / SOC Engineer · AI Security Engineer · selective consulting
 
-I'm a cybersecurity practitioner and technology consultant based in the San Francisco Bay Area, with hands-on experience in network engineering, security operations, and secure systems design. I came to security through building and operating real infrastructure — networks, servers, and the tooling that keeps them observable and defensible — and that operator's perspective shapes everything I build: security controls have to be practical, auditable, and maintainable, or they don't survive contact with production.
+## Who I am
 
-## My Security Philosophy
+I am a cybersecurity practitioner and technology consultant in the San Francisco Bay Area. I came to security through operating real networks and systems — not through a purely academic path — and that still shapes how I build: controls have to be practical, auditable, and maintainable, or they do not survive production.
 
-Three principles run through all of my work:
+## Philosophy
 
-1. **Defense in depth, least privilege by default.** Every system I design assumes a layer will fail. Segmentation, allow-listing, and default-deny policy are the baseline, not the aspiration.
-2. **If it isn't documented and testable, it isn't a control.** I hold my own projects to the same standard I'd apply in an audit: written threat models, decision records, CI quality gates, and reproducible results.
-3. **Humans approve, machines assist.** As I build increasingly automated and AI-driven security tooling, I keep a hard architectural rule: automation recommends, drafts, classifies, and prioritizes — humans approve anything irreversible, destructive, or security-sensitive.
+1. **Defense in depth, least privilege by default.** Design as if a layer will fail. Segment, allow-list, default-deny.
+2. **If it is not documented and testable, it is not a control.** Threat models, decision records, CI security gates, reproducible evidence.
+3. **Humans approve; machines assist.** Automation may recommend, draft, classify, and prioritize. People authorize irreversible or high-impact actions.
 
-## What I'm Building Right Now
+## What I am building now (Sep 2026)
 
-My current focus is the intersection of **AI and defensive security** — both using AI to scale security operations, and securing the AI-agent ecosystems that organizations are now rapidly adopting.
+Flagship work ships under the **IANUA** ecosystem — platform, scanner, identity layer, and governance framework:
 
-My flagship work now ships as the **IANUA ecosystem** — a platform, a scanner, a
-zero-trust identity layer, and the governance framework that binds them:
+- **[IANUA](https://github.com/IRsoctierDT/IANUA)** — local-first AI operations / cyber command center: agentic triage, MITRE ATT&CK mapping, RAG, policy-gated tools, tamper-evident audit, compliance/trust surfaces, reproducible case studies. Docs: [irsoctierdt.github.io/IANUA](https://irsoctierdt.github.io/IANUA/).
+- **[IANUA-Broker](https://github.com/IRsoctierDT/IANUA-Broker)** — offline-by-default MCP / local-agent posture scanner (`mcpscan`), published on PyPI as [`ianua-broker`](https://pypi.org/project/ianua-broker/) (v1.5.2 line). Docs: [irsoctierdt.github.io/IANUA-Broker](https://irsoctierdt.github.io/IANUA-Broker/).
+- **[Agent Trust Broker](https://github.com/IRsoctierDT/agent-trust-broker)** — zero-trust agent identity, scoped short-lived credentials, allow/deny/escalate policy, hash-chained audit; fail-closed reference implementation for privileged tool dispatch.
+- **[EAODS v3 Enterprise](https://github.com/IRsoctierDT/EAODS-v3-Enterprise-Edition)** — enterprise AI operator documentation / governance / cyber-defense suite with schema validation and CI gates; patterns implement in ATB → IANUA. Docs site live on GitHub Pages.
+- **AppSec supply-chain lab** — dependency and SBOM-oriented detection / remediation practice environment (in progress).
+- **Brotherhood Accountability** (private) — local-first covenant accountability product with passkeys, witnessed commitments, and Cloudflare-backed sync; App Store packaging via Capacitor in progress.
 
-- **[IANUA](https://github.com/IRsoctierDT/IANUA)** — a local-first, secure-by-default AI operations & cyber command center. It runs a fleet of specialized agents (SOC analyst triage with 0–100 severity scoring, MITRE ATT&CK mapping, threat-intel enrichment, vulnerability assessment ranking, incident reporting) over a local RAG knowledge base, behind a policy-gated MCP tool surface with a zero-trust identity gate on every dispatch, a tamper-evident Ed25519-signed audit log, Sigma correlation rules, and a Vanta-style compliance layer (controls, evidence, trust page). Eleven case studies document each component end-to-end.
-- **[IANUA-Broker / AI Agentic MCPscan](https://github.com/IRsoctierDT/IANUA-Broker)** — an open-source (Apache-2.0), offline-by-default security posture scanner for MCP servers and local AI-agent setups, published on PyPI as `ai-agentic-mcpscan` and now **stable v1.x** (v1.4.0). It inventories a machine's AI infrastructure as typed assets, finds exposed servers, plaintext secrets, over-broad tool scopes, and unpinned packages across seven agent ecosystems (Claude, Cursor, Windsurf, Cline, VS Code, Zed, Continue), grades posture A–F, emits SARIF 2.1.0 for GitHub code scanning, offers a safe opt-in `--fix`, and supports authorized LAN scanning behind an explicit policy gate.
-- **[Agent Trust Broker](https://github.com/IRsoctierDT/agent-trust-broker)** — zero-trust identity issuance and policy enforcement for AI-agent fleets: every privileged action requires a verifiable, short-lived, scoped identity and a per-action allow / deny / escalate decision recorded in a hash-chained audit log, fail-closed by construction, with a T1–T12 conformance test matrix and a human-operator escalation CLI. It gates every tool dispatch inside IANUA.
-- **[EAODS](https://github.com/IRsoctierDT/EAODS-v3)** — the Enterprise AI Operator Documentation Suite (release line v17.0–v17.3): an enterprise architecture, governance, and cyber-defense framework for AI-assisted organizations, with schema-validated documents, traceability, and CI quality gates. Its zero-trust identity pattern (PAT-0001) is reference-implemented by the Agent Trust Broker — a complete standard → control → implementation → conformance-test chain.
-- **[Application Security Lab](https://github.com/IRsoctierDT/portfolio-appsec-lab)** — an in-progress lab environment for detecting and remediating software supply chain vulnerabilities across multiple package ecosystems.
-- **Home security lab** — a continuously evolving defensive environment built on pfSense (Netgate 4200), UniFi infrastructure, VLAN segmentation, Suricata IDS/IPS, pfBlockerNG, and Unbound DNS, where I test detection rules, hardening changes, and network policy before writing about them.
+I still train the fundamentals in public artifacts: Wireshark/pcap IR writeups, NIST CSF-aligned risk assessments, Linux hardening labs, and home-lab detection work (pfSense / UniFi / Suricata-class stacks).
 
-Alongside the building, I maintain the foundations: traffic analysis in Wireshark, incident response documentation, NIST CSF-aligned risk assessment and auditing, Linux hardening, and SQL-based log investigation — all captured as artifacts in this portfolio. I also work continuously on secure coding practice (including GitHub's Secure Code Game) and treat every project's CI pipeline as a security exercise: bandit, gitleaks, pip-audit, mypy --strict, SBOM generation, and signed releases are standard equipment in my repositories.
+## Direction
 
-## Where I'm Headed
+I want a security engineering seat where I own defensive tooling and automation — especially detection engineering and AI-security controls — or consulting engagements with the same bar. Near-term focus:
 
-My goal is a security engineering role where I can own defensive tooling and automation — **security engineer, SOC/detection engineer, or AI security engineer**. Specifically, I want to:
+- Grow real-world adoption of `ianua-broker` / mcpscan while MCP ecosystems move underfoot
+- Mature Agent Trust Broker toward a default pattern for scoped agent authority
+- Deepen Sigma/detection content and triage→detection feedback inside IANUA
+- Finish the supply-chain lab as a portfolio-grade artifact set
+- Keep governance (EAODS) honest: standard → control → implementation → test
 
-- **Grow MCPscan's adoption in the stable v1.x line** — 1.0 shipped with the full planned feature set and the line keeps moving (AI-asset inventory, CodeQL, dependency hardening); the goal now is real-world dogfooding, community adoption, and keeping pace with the fast-moving MCP ecosystem — a trusted tool for the AI-agent security niche while the industry still lacks one.
-- **Make zero-trust agent identity the norm** — mature the Agent Trust Broker from v0.1 reference implementation toward the standard way an agent fleet proves who is acting, under what scope, on whose authority — and keep EAODS evolving as the governance framework those controls trace back to.
-- **Deepen detection engineering** — expand IANUA's Sigma correlation content and triage-to-detection feedback loop, and bring that discipline to a production SOC.
-- **Build out the AppSec supply chain lab** into a full artifact set: dependency-confusion and typosquatting detection, SBOM-driven vulnerability management, and remediation playbooks.
-- **Keep raising the governance bar** — I believe the security engineers who thrive in the next decade will be the ones who can direct AI systems safely: with policy-as-code, audit trails, and human-in-the-loop gates. I'm building that muscle now, in public, in my repositories — and writing the framework (EAODS) that makes it repeatable for others.
+## Contact
 
-Protecting systems and data isn't abstract to me — it's the craft of making complex infrastructure legible, governable, and resilient. That's the work I want to do, and this portfolio is the evidence of how I do it.
-
----
-
-**Ivan Rozenblad** · Emeryville, CA · [GitHub @IRsoctierDT](https://github.com/IRsoctierDT) · irozenblad@icloud.com
+**Ivan Rozenblad** · Emeryville, CA  
+GitHub: [@IRsoctierDT](https://github.com/IRsoctierDT) · Email: irozenblad@icloud.com  
+Portfolio: https://irsoctierdt.github.io/-ivan-rozenblad-cybersecurity-portfolio/
